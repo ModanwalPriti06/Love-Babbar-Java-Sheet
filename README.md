@@ -45,7 +45,13 @@ public class Main {
 ```
 ### Find kth max element from array :
 
-We use priority queue because according to prioroty we do (FIFO) and use max Heap. In max Heap which element is max that element delete first means out first. But In java here implement minHeap. If you pass a comparator to the constructor , then It will be convert from minHeap to maxHeap in java. 
+We use priority queue because according to prioroty we do (FIFO) and use max Heap. In max Heap which element is max that element delete first means out first. But In java here implement minHeap. 
+
+If you pass a comparator to the constructor , then It will be convert from minHeap to maxHeap in java.
+```
+PriorityQueue<Integer> pq= new PriorityQueue<>(Collections.reverseOrder());
+```
+
 ```
 import java.util.*;
 
