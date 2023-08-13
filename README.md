@@ -1,6 +1,6 @@
 # Love Babbar Java Sheet
 
-### Find kth smallest element from array :
+## Find kth smallest element from array :
 ```
 import java.util.*;
 
@@ -29,7 +29,7 @@ public class Main {
 }
 
 ```
-### Reverse a Array :
+## Reverse a Array :
 ```
  public static int kthMax(int[] arr, int n){
     int i=0;
@@ -43,7 +43,7 @@ public class Main {
      }    
  }
 ```
-### Find kth max element from array :
+## Find kth max element from array :
 
 We use priority queue because according to prioroty we do (FIFO) and use max Heap. In max Heap which element is max that element delete first means out first. But In java here implement minHeap. 
 
@@ -80,4 +80,46 @@ public class Main {
     }
 }
 
+```
+## Sort an array of 0s, 1s and 2s
+
+```
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        int[] arr = {2,0,1,1,2,0,2,0,0,1};
+        int zero=0;
+        int one=0;
+        int two=0;
+        int i=0;
+        while(i<arr.length){
+            if(arr[i]==0){
+                zero++;
+            }
+            else if(arr[i]==1){
+                one++;
+            }
+            else{
+                two++;
+            }
+            i++;
+        }
+        i=0;
+        while(i<zero){
+            arr[i]=0;
+            i++;
+        }
+        while(i<zero+one){
+            arr[i]=1;
+            i++;
+        }
+        while(i<zero+one+two){
+            arr[i]=2;
+            i++;
+        }
+        System.out.print(Arrays.toString(arr));
+        
+    }
+}
 ```
