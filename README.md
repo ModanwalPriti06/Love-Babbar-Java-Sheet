@@ -123,3 +123,34 @@ public class Main {
     }
 }
 ```
+## Move all negative numbers to beginning and positive to end with constant extra space
+```
+Input: -12, 11, -13, -5, 6, -7, 5, -3, -6
+Output: -12 -13 -5 -7 -3 -6 11 6 5
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	int[] arr= { -12, 11, -13, -5, 6, -7, 5, -3, -6};
+// 	System.out.print(Arrays.toString(arr));
+	int i=0;
+	int j=arr.length-1;
+	while(i<=j){
+	    if(i<arr.length && arr[i] < 0){
+	        i++;
+	    }
+	    if(j>=0 && arr[j]>=0){
+	        j--;
+	    }
+	    if(i<j){
+	        int temp=arr[i];
+	        arr[i]= arr[j];
+	        arr[j]=temp;
+	    }
+	}
+	System.out.print(Arrays.toString(arr));
+	}
+}
+
+```
