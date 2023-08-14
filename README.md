@@ -154,3 +154,32 @@ public class Main
 }
 
 ```
+## Union & Intersection of two arrays
+
+```
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	int[] arr1= { 1,2,3,4,5};
+	int[] arr2 = {1,2,3};
+            HashSet<Integer> hs= new HashSet<>();
+            for(int num : arr1){
+                hs.add(num);
+            }
+            for(int num : arr2){
+                hs.add(num);
+            }
+            
+            int[] res= new int[hs.size()];
+            int i=0;
+            for(int num : hs){
+                res[i++]=num;
+             }
+            
+      System.out.print(Arrays.toString(res));
+   }
+ }
+
+```
+
