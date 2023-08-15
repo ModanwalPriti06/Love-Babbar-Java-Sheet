@@ -157,6 +157,12 @@ public class Main
 ## Union & Intersection of two arrays
 
 ```
+
+Input: arr1 -  1 2 3 4 5
+       arr2 -	1 2 3
+
+output: 1 2 3 4 5
+
 import java.util.*;
 public class Main
 {
@@ -181,5 +187,39 @@ public class Main
    }
  }
 
+```
+Intersection of two array
+```
+Input: arr1 -  1 2 3 4 5
+       arr2 -	1 2 3
+
+output: 1 2 3 
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	int[] arr1= { 1,2,3,4,5};
+	int[] arr2 = {1,2,3};
+    HashSet<Integer> hs= new HashSet<>();
+    HashSet<Integer> res= new HashSet<>();
+    for(int num : arr1){
+        hs.add(num);
+    }
+    for(int num : arr2){
+        if(hs.contains(num)){
+            res.add(num);
+        }
+        
+    }
+        int[] result = new int[res.size()];
+        int i = 0;
+        for (int num : res) {
+            result[i++] = num;
+        }
+    
+	System.out.print(Arrays.toString(result));
+	}
+}
 ```
 
