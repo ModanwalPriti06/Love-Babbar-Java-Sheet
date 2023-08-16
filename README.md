@@ -242,7 +242,19 @@ public class Main
 ```
 ## Find largest sum contiguous of array:
 ```
-
-
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+    int arr[] = {1,2,3,-2,5};
+     int sum=arr[0];
+        int maxValue=arr[0];
+        for(int i=1;i<arr.length;i++){
+           int maxV1 = Math.max(arr[i],sum+arr[i]);
+            maxValue= Math.max(maxValue,maxV1);
+        }
+        System.out.print(maxValue);
+	}
+}
 ```
 
