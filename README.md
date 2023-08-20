@@ -293,3 +293,51 @@ the largest and the smallest is 8-3 = 5.
 
 ```
 
+## Minimum number of jumps
+
+```
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        int[] arr = {2, 3, 1, 1, 4}; // Example array
+        int result = minJumps(arr);
+        System.out.println("Minimum number of jumps: " + result);
+    }
+    
+    public static int minJumps(int[] arr) {
+        if (arr.length <= 1) {
+            return 0; // No jumps needed for an array of size 1 or less
+        }
+        
+        if (arr[0] == 0) {
+            return -1; // Cannot move from the first element itself
+        }
+        
+        int n = arr.length;
+        int jumps = 1;
+        int currentReach = arr[0];
+        int maxReach = arr[0];
+        
+        for (int i = 1; i < n; i++) {
+            if (i == n - 1) {
+                return jumps; // Reached the end of the array
+            }
+            
+            maxReach = Math.max(maxReach, i + arr[i]);
+            
+            if (i == currentReach) {
+                if (maxReach <= currentReach) {
+                    return -1; // Cannot proceed further
+                }
+                jumps++;
+                currentReach = maxReach;
+            }
+        }
+        
+        return -1; // Could not reach the end of the array
+    }
+}
+
+```
+
