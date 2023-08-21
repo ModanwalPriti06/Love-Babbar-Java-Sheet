@@ -340,4 +340,28 @@ public class Main {
 }
 
 ```
+## Find Duplicate value from an Array
+
+```
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    int[] nums= {1,2,6,3,2};
+		System.out.println("Hello World");
+	 HashMap<Integer,Integer> hm=new HashMap<>();
+
+        int count=0;
+        for(int i=0;i<nums.length;i++){
+            hm.put(nums[i],hm.getOrDefault(nums[i],0)+1);
+
+        }
+       for (Map.Entry<Integer, Integer> entry : hm.entrySet()) {
+            if (entry.getValue() > 1) {
+                System.out.println("Key: " + entry.getKey() + " has duplicate value.");
+            }
+        }    
+	}
+}
+```
 
