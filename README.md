@@ -393,4 +393,23 @@ public class Main
 }
 
 ```
+## Kadane's Algorithm
+```
+  long maxSubarraySum(int arr[], int n){
+        int curr = 0;
+        long max= Long.MIN_VALUE;
+        int op=0;
+        for(int i=0;i<n;i++){
+            curr+= arr[i];
+            if(curr>max){
+                max=curr;
+            }
+          
+           if(curr<0){
+               curr=0;
+           }
+        }
+        return max;
+    }
+```
 
