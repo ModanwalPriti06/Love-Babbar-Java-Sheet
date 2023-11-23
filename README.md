@@ -412,4 +412,12 @@ public class Main
         return max;
     }
 ```
+## length of the longest single character substring that occurs at least thrice.
+Sample Input: aaaabaaa
+Sample Output: 3
+Explanation: "aaa" occurs thrice: [0, 2], [1, 3] and [5, 7], where the first two occurrences overlap.
+```
+```
+
+## Merge Intervals
 
