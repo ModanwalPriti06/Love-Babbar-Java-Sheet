@@ -1,5 +1,24 @@
 # Love Babbar Java Sheet
 
+```
+Array: 1/2/3/4/5/6/7/8/9/10/11/12/13/14/15/16/17/18/
+Matrix:
+String:
+Searching and sorting:
+LinkedList:
+Binary Trees:
+Binary Search Tree:
+Greedy:
+backTracking:
+Stack and Queue:
+Heap:
+Grap:
+Trie:
+DP:
+Bit Manipulation:
+
+```
+
 ## Find kth smallest element from array :
 ```
 import java.util.*;
